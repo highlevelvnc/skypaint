@@ -1,6 +1,14 @@
-import { PROCESS_STEPS } from "../data/site";
+import { PROCESS_STEPS, SERVICES } from "../data/site";
 import { Reveal } from "../components/Reveal";
 import { CheckCircle, Zap, Leaf } from "lucide-react";
+
+// Images mapped to each process step
+const STEP_IMAGES = [
+  SERVICES[0].gallery[1],  // Diagnóstico — interior being assessed
+  SERVICES[2].gallery[0],  // Orçamento — bathroom sink (precision measurement)
+  SERVICES[1].gallery[0],  // Execução — rope work in action
+  SERVICES[0].gallery[4],  // Entrega — finished stairs with LED (final result)
+];
 
 export default function Process() {
   return (
@@ -146,17 +154,22 @@ export default function Process() {
                       <div
                         className={`absolute -inset-1 bg-gradient-to-r ${glowColors[i]} rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000`}
                       />
-                      <div className="relative glass-panel p-6 rounded-2xl border border-outline-variant/10 max-w-sm">
-                        <div className="aspect-square rounded-xl overflow-hidden mb-4 bg-surface-container-highest">
-                          {/* Large step number as visual */}
-                          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-surface-container-high to-surface-container-highest">
-                            <span className="text-[120px] font-headline font-extrabold text-outline-variant/10">
-                              {s.step}
-                            </span>
-                          </div>
+                      <div className="relative glass-panel p-4 sm:p-6 rounded-2xl border border-outline-variant/10 max-w-sm">
+                        <div className="aspect-[4/3] sm:aspect-square rounded-xl overflow-hidden mb-4 bg-surface-container-highest relative img-zoom">
+                          <img
+                            src={STEP_IMAGES[i]}
+                            alt={s.title}
+                            loading="lazy"
+                            className="w-full h-full object-cover"
+                          />
+                          {/* Step number overlay */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#06092f]/80 via-transparent to-transparent pointer-events-none" />
+                          <span className="absolute bottom-3 right-4 text-5xl sm:text-6xl font-headline font-extrabold text-white/20">
+                            {s.step}
+                          </span>
                         </div>
                         <h4
-                          className={`font-headline font-bold text-xl ${colors[i]}`}
+                          className={`font-headline font-bold text-lg sm:text-xl ${colors[i]}`}
                         >
                           {s.title}
                         </h4>

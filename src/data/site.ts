@@ -7,7 +7,7 @@ export const SITE = {
   phoneTel: "+351910346159",
   whatsapp: "https://wa.me/351910346159",
   email: "geral@skypaint.pt",
-  yearsExperience: 12,
+  yearsExperience: 4,
   projectsDelivered: 480,
   satisfaction: 99,
 };

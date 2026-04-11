@@ -38,7 +38,7 @@ export default function Services() {
           >
             <div className="text-center">
               <div className="text-4xl font-bold text-white">
-                <AnimatedCounter to={12} suffix="+" />
+                <AnimatedCounter to={4} suffix="+" />
               </div>
               <div className="text-sm text-[#a5a8d5] mt-1">Anos</div>
             </div>
