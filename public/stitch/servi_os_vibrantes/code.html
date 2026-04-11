@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skypaint | Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#00586c",
+                    "on-secondary-fixed": "#003a47",
+                    "on-primary": "#0a2a6c",
+                    "on-surface": "#e3e3ff",
+                    "surface": "#06092f",
+                    "on-primary-container": "#001e5a",
+                    "tertiary-fixed-dim": "#00efce",
+                    "surface-container": "#101442",
+                    "secondary-dim": "#00c3eb",
+                    "on-surface-variant": "#a5a8d5",
+                    "tertiary": "#b6ffed",
+                    "on-tertiary-container": "#005d4f",
+                    "inverse-surface": "#fbf8ff",
+                    "surface-container-highest": "#1b2055",
+                    "on-error-container": "#ffa8a3",
+                    "on-tertiary-fixed-variant": "#006859",
+                    "tertiary-fixed": "#26fedc",
+                    "outline": "#6f729d",
+                    "on-primary-fixed-variant": "#112e71",
+                    "surface-bright": "#202660",
+                    "secondary-fixed-dim": "#1cd5ff",
+                    "primary-container": "#869ee7",
+                    "tertiary-container": "#26fedc",
+                    "surface-container-high": "#151a4c",
+                    "primary-dim": "#849be4",
+                    "secondary-container": "#00677e",
+                    "surface-tint": "#94abf5",
+                    "primary-fixed": "#8ea6f0",
+                    "on-secondary-container": "#eefaff",
+                    "background": "#06092f",
+                    "inverse-on-surface": "#4e527a",
+                    "on-background": "#e3e3ff",
+                    "inverse-primary": "#445ca0",
+                    "secondary": "#00d2fd",
+                    "tertiary-dim": "#00e8c9",
+                    "surface-variant": "#1b2055",
+                    "secondary-fixed": "#79dfff",
+                    "on-secondary": "#004352",
+                    "on-error": "#490006",
+                    "on-tertiary-fixed": "#00483d",
+                    "error-container": "#9f0519",
+                    "surface-dim": "#06092f",
+                    "outline-variant": "#41456c",
+                    "primary-fixed-dim": "#8199e1",
+                    "surface-container-lowest": "#000000",
+                    "on-tertiary": "#006657",
+                    "primary": "#94abf5",
+                    "error-dim": "#d7383b",
+                    "on-primary-fixed": "#000929",
+                    "surface-container-low": "#0a0e38",
+                    "error": "#ff716c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(27, 32, 85, 0.6);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #94abf5 0%, #00d2fd 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(0, 210, 253, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#06092f]/60 backdrop-blur-xl shadow-[0_0_20px_rgba(148,171,245,0.1)] flex justify-between items-center px-8 py-4 max-w-full">
+<div class="text-2xl font-bold bg-gradient-to-r from-[#94abf5] to-[#00d2fd] bg-clip-text text-transparent font-headline tracking-tight">
+            Skypaint
+        </div>
+<div class="hidden md:flex items-center gap-8 font-headline tracking-tight">
+<a class="text-[#00d2fd] border-b-2 border-[#00d2fd] pb-1 hover:scale-105 transition-all duration-300" href="#">Services</a>
+<a class="text-[#94abf5]/70 hover:text-[#94abf5] hover:scale-105 transition-all duration-300" href="#">Portfolio</a>
+<a class="text-[#94abf5]/70 hover:text-[#94abf5] hover:scale-105 transition-all duration-300" href="#">Process</a>
+<a class="text-[#94abf5]/70 hover:text-[#94abf5] hover:scale-105 transition-all duration-300" href="#">Consultation</a>
+</div>
+<button class="hero-gradient text-on-primary-container px-6 py-2 rounded-full font-headline font-bold hover:scale-105 hover:shadow-[0_0_15px_rgba(0,210,253,0.3)] transition-all duration-300 active:scale-95">
+            Book Now
+        </button>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="px-8 py-16 md:py-24 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row items-end justify-between gap-8 mb-16">
+<div class="max-w-3xl">
+<span class="label-md uppercase tracking-[0.2em] text-secondary font-bold mb-4 block">Precision Craftsmanship</span>
+<h1 class="text-5xl md:text-7xl font-headline font-bold leading-none tracking-tighter text-white mb-6">
+                        Kinetic <span class="text-glow text-secondary">Aesthetics</span><br/>For Modern Living.
+                    </h1>
+</div>
+<div class="hidden md:block text-right pb-2">
+<p class="text-on-surface-variant max-w-xs text-sm leading-relaxed">
+                        Transforming structural boundaries through high-tech precision and avant-garde color systems.
+                    </p>
+</div>
+</div>
+<!-- Services Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Main Service: Rappel Painting -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-high h-[500px]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="Professional painter in high-altitude safety gear rappel painting a modern skyscraper exterior with electric blue accents against a sunset sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTlm2d7osXHreDu7QrH_Jm7YnV1G8GcAff_xn4eIS6rgUbtVBRAEkz5tjMGlApQRIup3vrnlym7BAhiT3rSo2OvwQCjGbg3nKpzqbBOFA11NSK6S__GnmniSuJE205tovIAEZDrumTPEMoEZHfoCWl1XCfjBxlxPRHfPt5Z7TN1twpoGQsBx28b3QJmhL8IstYq95mhYeSKMMHO6duOwk9sMranIjA_7ohHyscrvSrj-mzx_s8-jvFAHTWjT0jIz5xBVUxhkgDeR4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="height">height</span>
+<h2 class="text-3xl font-headline font-bold">Rappel Painting</h2>
+</div>
+<p class="text-on-surface-variant max-w-md mb-6">
+                            Elite high-altitude coating solutions for architectural landmarks. Using industrial-grade kinetic rigging for surgical precision on unreachable facades.
+                        </p>
+<div class="flex gap-4">
+<button class="bg-secondary/10 border border-secondary/20 text-secondary px-4 py-2 rounded-lg text-sm font-bold uppercase tracking-wider hover:bg-secondary hover:text-on-secondary transition-all duration-300">
+                                View Technical Specs
+                            </button>
+</div>
+</div>
+</div>
+<!-- Service: Interior/Exterior -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-highest h-[500px]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-110 transition-transform duration-700" data-alt="Minimalist interior space with smooth matte walls in deep charcoal and neon light reflections on polished concrete floors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqStU8USXp4Fs8HccoZowfK1mv0CpJcLr8a6PzgsWyS6seB26yCpUNMMC3EYXEKK68IrQctveTgwu-ArCeqDehu4KSM1U8rMSYV8AqcE0Bp0vciluG8pTPJHitT3FbEJxk6Np30j7GeTFI6mz8Bqd_4ZGQpXHOflzICjiRk0UTdUgZfkLUPWPn3ZOlRQCWAsiQKymZmDsINsh0-IdRNPetTt0pkHkPhkoBok38DdTzmNfbI2zuqNlYI52mu41jlzP3guch3lS5_SY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-4" data-icon="format_paint">format_paint</span>
+<h2 class="text-2xl font-headline font-bold mb-3">Interior &amp; Exterior Painting</h2>
+<p class="text-on-surface-variant text-sm">Dual-layer environmental shielding with high-pigment saturation for extreme durability.</p>
+</div>
+</div>
+<!-- Service: Bathroom Reno -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700" data-alt="Futuristic bathroom with dark stone tiles, recessed cyan lighting, and sleek chrome fixtures in a luxury setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXp7Psp9utZZg-WlZOPrNeBx8THyaLAwvWUzaH7AiJrDWRfM3AhL97Lv1N1GN6rPpvG5ET60ErQ5F5lJ4xNyQIkA3fY_KE6I912h8VI46nyYAvOxxvpK30clpELdRUtpnC0PNzQ5ySvzSNs08a7MEfW-I72PTz81CL-VqiPFgek84KGj9JppwD7Gn3RFc9eahyiwNLkSEp3RnHBruDYTfJBbZhuUurhGiaaM2N6twN5RnzxZVCEJYT5PzfESCLHKY4C9pmsHBWE_8"/>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="bg-secondary w-12 h-1 mb-6"></div>
+<h2 class="text-xl font-headline font-bold mb-2">Bathroom Reno</h2>
+<p class="text-on-surface-variant text-sm mb-4">Hydro-sonic installation and moisture-resistant polymer surfaces for a spa-tech sanctuary.</p>
+<span class="material-symbols-outlined text-secondary" data-icon="bathtub">bathtub</span>
+</div>
+</div>
+<!-- Service: Decking -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-[#1b2055] h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-110 transition-transform duration-700" data-alt="Modern geometric wooden deck with integrated LED floor lighting overlooking a dark swimming pool at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAro7Jin8Qjxd6sdJoSEr_dwvoU5s2FwcqUuaGNh6iYVNdeapN5mn14KerzoXRYS120y3PPOBo9nJB8xgjmHQDZ-PrVX6IBbx8D_rPQr1RGtDbxVJ-jjzydyP0fqlTYO3QYeJJLd8GRaKA6ASqokstbZVvGpZyfTukQ9u_WipUbv87RN_guAuyrg8C8uO_aPJC8v-ZCM4mlQimjUHsUDux0aXx6oVPqU2ip8L37El9D9X6Nr3q4lexrI-qUrMMUr3tKzF6p1l9Yl0A"/>
+<div class="absolute inset-0 border-[1px] border-secondary/10 group-hover:border-secondary/30 transition-colors"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h2 class="text-xl font-headline font-bold mb-2">Precision Decking</h2>
+<p class="text-on-surface-variant text-sm mb-4">Architectural timber fusion with invisible fastening systems for seamless outdoor flow.</p>
+<div class="flex items-center gap-2 text-tertiary font-bold text-xs tracking-widest uppercase">
+<span>Composite / Hardwood</span>
+</div>
+</div>
+</div>
+<!-- Service: Drywall -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high h-[400px]">
+<div class="absolute inset-0 flex items-center justify-center opacity-10">
+<span class="material-symbols-outlined text-[200px]" data-icon="grid_view">grid_view</span>
+</div>
+<div class="relative p-8 h-full flex flex-col justify-end">
+<span class="material-symbols-outlined text-secondary mb-4" data-icon="texture">texture</span>
+<h2 class="text-xl font-headline font-bold mb-2">Drywall Engineering</h2>
+<p class="text-on-surface-variant text-sm">Acoustic dampening and Level 5 finish for galleries and ultra-luxury residential spaces.</p>
+</div>
+</div>
+<!-- Service: Ceramic Tiles -->
+<div class="md:col-span-6 group relative overflow-hidden rounded-xl bg-surface-container-low h-[350px]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700" data-alt="Close-up of large-format dark hexagonal tiles being installed with glowing teal grout lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1sgqauFk5kIhr30DaL_nhNEKWBpLt_1teq6vak7g0E8y_BGaKKXoU0_bW8S3vr6D-ugjR6xiEk0twWShGW3bX-7qIfNp5lfZ7eNbbVyEHg--S4PhhnO1dE_ypVEystSRre7ZyIssEXVrmilebS8xiiOY_B6IEVVIZPXLjz1zLZc9dXe4fP8hy7HQZaQJ38rhhlP81vNMKtuO4Wz0n4z-P1mP_Ndac-X0LF7n_QdWwwM-23cuV19LSobGthd3HKlnwPFT66otpuL8"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface to-transparent"></div>
+<div class="relative p-10 h-full flex flex-col justify-center max-w-sm">
+<h2 class="text-3xl font-headline font-bold mb-3">Ceramic Tiles</h2>
+<p class="text-on-surface-variant text-sm">Large-format porcelain and bespoke mosaic mapping for high-traffic environments.</p>
+<div class="mt-6 flex items-center gap-4">
+<div class="h-px flex-1 bg-outline-variant"></div>
+<span class="material-symbols-outlined text-secondary" data-icon="grid_on">grid_on</span>
+</div>
+</div>
+</div>
+<!-- Service: Handyman -->
+<div class="md:col-span-6 group relative overflow-hidden rounded-xl bg-surface-container-highest h-[350px]">
+<div class="p-10 h-full flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<span class="label-md uppercase tracking-widest text-tertiary mb-2 block">Quick-Response Unit</span>
+<h2 class="text-3xl font-headline font-bold mb-4">Tactical Handyman</h2>
+<p class="text-on-surface-variant text-sm">Elite maintenance and rapid hardware upgrades for commercial and residential ecosystems.</p>
+</div>
+<div class="w-24 h-24 rounded-full border-2 border-dashed border-secondary/40 flex items-center justify-center group-hover:rotate-45 transition-transform duration-500">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="construction">construction</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-8 py-20 max-w-7xl mx-auto">
+<div class="glass-panel p-12 md:p-20 rounded-2xl flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-secondary/10 rounded-full blur-[80px]"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+<h2 class="text-4xl md:text-6xl font-headline font-bold mb-8 leading-tight">Ready to <span class="text-secondary italic">Redefine</span><br/>Your Environment?</h2>
+<p class="text-on-surface-variant max-w-xl mb-10 text-lg">
+                    Schedule a digital survey today. Our specialists leverage LIDAR scanning for pinpoint accurate estimates.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="hero-gradient text-on-primary-container px-10 py-4 rounded-full font-headline font-bold text-lg hover:scale-105 transition-all shadow-xl">
+                        Initialize Project
+                    </button>
+<button class="bg-surface-bright/20 border border-outline-variant px-10 py-4 rounded-full font-headline font-bold text-lg hover:bg-surface-bright/40 transition-all backdrop-blur-md">
+                        Digital Catalog
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#06092f] w-full mt-auto flex flex-col md:flex-row justify-between items-center px-12 py-8 border-t border-[#94abf5]/10">
+<div class="flex flex-col items-center md:items-start mb-6 md:mb-0">
+<span class="text-lg font-bold text-[#b6ffed] font-headline mb-2">Skypaint</span>
+<p class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#94abf5]/50">
+                © 2024 Skypaint Kinetic Renovations. All rights reserved.
+            </p>
+</div>
+<div class="flex gap-8 font-['Plus_Jakarta_Sans'] text-sm tracking-wide">
+<a class="text-[#94abf5]/50 hover:text-[#b6ffed] transition-colors duration-200 hover:underline decoration-[#00d2fd]" href="#">Privacy Policy</a>
+<a class="text-[#94abf5]/50 hover:text-[#b6ffed] transition-colors duration-200 hover:underline decoration-[#00d2fd]" href="#">Terms of Service</a>
+<a class="text-[#94abf5]/50 hover:text-[#b6ffed] transition-colors duration-200 hover:underline decoration-[#00d2fd]" href="#">Sustainability</a>
+<a class="text-[#94abf5]/50 hover:text-[#b6ffed] transition-colors duration-200 hover:underline decoration-[#00d2fd]" href="#">Contact</a>
+</div>
+</footer>
+</body></html>

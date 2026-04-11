@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skypaint | Modern Renovations &amp; Digital Color Craft</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#e3e3ff",
+                        "outline-variant": "#41456c",
+                        "tertiary-container": "#26fedc",
+                        "secondary-container": "#00677e",
+                        "primary-fixed-dim": "#8199e1",
+                        "on-surface-variant": "#a5a8d5",
+                        "surface-container-low": "#0a0e38",
+                        "surface-dim": "#06092f",
+                        "primary": "#94abf5",
+                        "tertiary-fixed-dim": "#00efce",
+                        "on-secondary": "#004352",
+                        "error-container": "#9f0519",
+                        "inverse-primary": "#445ca0",
+                        "error-dim": "#d7383b",
+                        "on-tertiary-fixed": "#00483d",
+                        "tertiary-fixed": "#26fedc",
+                        "on-primary-container": "#001e5a",
+                        "surface": "#06092f",
+                        "outline": "#6f729d",
+                        "primary-container": "#869ee7",
+                        "inverse-surface": "#fbf8ff",
+                        "on-primary": "#0a2a6c",
+                        "secondary-fixed": "#79dfff",
+                        "secondary": "#00d2fd",
+                        "inverse-on-surface": "#4e527a",
+                        "surface-container-lowest": "#000000",
+                        "on-primary-fixed-variant": "#112e71",
+                        "on-background": "#e3e3ff",
+                        "surface-container-high": "#151a4c",
+                        "on-secondary-fixed": "#003a47",
+                        "primary-fixed": "#8ea6f0",
+                        "secondary-dim": "#00c3eb",
+                        "primary-dim": "#849be4",
+                        "on-tertiary": "#006657",
+                        "on-tertiary-fixed-variant": "#006859",
+                        "surface-container": "#101442",
+                        "surface-bright": "#202660",
+                        "on-secondary-container": "#eefaff",
+                        "tertiary": "#b6ffed",
+                        "surface-tint": "#94abf5",
+                        "on-secondary-fixed-variant": "#00586c",
+                        "on-primary-fixed": "#000929",
+                        "tertiary-dim": "#00e8c9",
+                        "secondary-fixed-dim": "#1cd5ff",
+                        "surface-container-highest": "#1b2055",
+                        "background": "#06092f",
+                        "surface-variant": "#1b2055",
+                        "on-error-container": "#ffa8a3",
+                        "on-error": "#490006",
+                        "on-tertiary-container": "#005d4f",
+                        "error": "#ff716c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        
+        .glass-panel {
+            background: rgba(27, 32, 85, 0.6);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #94abf5 0%, #00d2fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #94abf5 0%, #00d2fd 100%);
+        }
+
+        .kinetic-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(0, 210, 253, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-tertiary selection:text-on-tertiary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#06092f]/60 backdrop-blur-xl shadow-[0_0_20px_rgba(148,171,245,0.1)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-[#94abf5] to-[#00d2fd]">
+                Skypaint
+            </div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] text-sm tracking-tight">
+<a class="text-[#00d2fd] font-bold border-b-2 border-[#00d2fd] pb-1" href="#">Portfolio</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Services</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Paint Lab</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-gradient-primary text-on-primary-container px-6 py-2 rounded-full font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(0,210,253,0.3)] active:brightness-110">
+                Get Quote
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center overflow-hidden pt-20">
+<!-- Animated Background Elements -->
+<div class="absolute inset-0 z-0">
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary/20 blur-[120px] rounded-full"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-tertiary/5 blur-[160px] rounded-full"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center relative z-10">
+<div class="space-y-8">
+<div class="inline-block px-4 py-1 rounded-full border border-outline-variant/30 bg-surface-container-high/50 backdrop-blur-md">
+<span class="text-xs font-bold tracking-widest text-tertiary uppercase">Light is our Architect</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter">
+                        Crafting <br/>
+<span class="text-gradient">Luminous</span><br/>
+                        Spaces.
+                    </h1>
+<p class="text-on-surface-variant text-lg max-w-md leading-relaxed">
+                        Redefining modern renovations through the intersection of digital precision and high-end artisanal painting. Innovation is in our DNA.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-gradient-primary text-on-primary-container px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all shadow-lg active:scale-95">
+                            Start Your Project
+                        </button>
+<button class="px-8 py-4 rounded-full border border-outline-variant/50 font-bold text-lg hover:bg-surface-bright/20 transition-all flex items-center gap-2">
+                            Explore Paint Lab
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Interactive 3D Mockup Container -->
+<div class="relative group">
+<div class="absolute -inset-4 bg-gradient-to-r from-primary to-secondary opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-700"></div>
+<div class="relative glass-panel rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl border border-white/10">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-60" data-alt="Ultra-modern minimalist living room with dramatic blue lighting and architectural paint finishes, high-end photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSEpmR6imqBqB5K_WwJNKNMvPsumhhmWHSasIbjVnrkouIn8NCrqTGIbJpEY3tp6HfrjQYNfaN7GVdcmTjvlcl1vPIJpvAn-MQLGcnc8MUWYABL_jCv_IFCHAeeUGy2oxitI3U_G7GuoRNnJ4CQOVR4mRKjcwiICB_rzinWdoisMvHfClgOExtumqPoIO9OUPGWK0CQ35HK-eXSMbAuYdUrHgHchg-84ESPfzO9aPNIkVInSWWbE5Z4rD7aLDfPmOk-nLRZPzU6mU"/>
+<div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-surface to-transparent">
+<div class="text-4xl font-bold mb-2">480+</div>
+<div class="text-sm font-bold uppercase tracking-[0.2em] text-secondary">Projects Completed</div>
+</div>
+<!-- Floating Tech Elements -->
+<div class="absolute top-10 right-10 p-4 glass-panel rounded-2xl border border-white/20 animate-bounce">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Services -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div>
+<h2 class="text-5xl font-bold tracking-tight mb-4">Precision <span class="text-gradient">Services</span></h2>
+<p class="text-on-surface-variant max-w-xl">From digital consultation to high-impact execution, we merge technical accuracy with artistic vision.</p>
+</div>
+<div class="flex gap-12">
+<div class="text-center">
+<div class="text-4xl font-bold text-primary">12+</div>
+<div class="text-[10px] uppercase tracking-widest text-outline">Years Experience</div>
+</div>
+<div class="text-center">
+<div class="text-4xl font-bold text-secondary">100%</div>
+<div class="text-[10px] uppercase tracking-widest text-outline">Transparency</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-[800px]">
+<!-- Large Feature -->
+<div class="md:col-span-2 md:row-span-2 glass-panel rounded-3xl p-10 flex flex-col justify-between group overflow-hidden relative">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-700" data-alt="Professional painter using a precision spray tool in a futuristic high-tech workshop, neon blue lighting highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2MsHCe9hk-FQPlJbk_3r4Cfycy3IY1cY2U6LFdRTCWt0y-DCgQVOeLhsV-iDpshktoW0Cp-ZTztuONX7ewAJwbb5wOx5NFg2inWb4CrzuBHSi-CYa6-FBJmFTtQs0FLT-u3H9-E6srm90aTQOOmVV4LmLY1DMAASnmNCrcXi83dnjbiLbxHgERYd58C77zLea-1Ap95MvIfV33ijNIAWkH2L013qJpNBSawX6tsDlnv1uXSyucYg597e1Yjpt8p7NxEYj7gyvkKk"/>
+<div class="relative z-10">
+<div class="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">architecture</span>
+</div>
+<h3 class="text-3xl font-bold mb-4">Digital Paint Mapping</h3>
+<p class="text-on-surface-variant leading-relaxed">Using laser-precise LIDAR technology to map your space and simulate color behavior under different lighting conditions before a single drop is applied.</p>
+</div>
+<div class="relative z-10 mt-8">
+<a class="inline-flex items-center gap-2 text-secondary font-bold group" href="#">
+                                Learn the Innovation <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Medium Feature -->
+<div class="md:col-span-2 glass-panel rounded-3xl p-8 flex items-center gap-8 group">
+<div class="w-24 h-24 shrink-0 rounded-2xl bg-secondary/10 flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
+<span class="material-symbols-outlined text-secondary text-4xl">brush</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-2">Artisanal Finishes</h3>
+<p class="text-sm text-on-surface-variant">Venetian plasters, metallic gradients, and custom textures crafted by masters.</p>
+</div>
+</div>
+<!-- Small Feature 1 -->
+<div class="bg-surface-container-high rounded-3xl p-8 group kinetic-hover transition-all">
+<span class="material-symbols-outlined text-tertiary mb-4 text-3xl">eco</span>
+<h3 class="text-xl font-bold mb-2">Eco-Precision</h3>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider">Low-VOC High-Impact</p>
+</div>
+<!-- Small Feature 2 -->
+<div class="bg-surface-container-highest rounded-3xl p-8 group kinetic-hover transition-all">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">analytics</span>
+<h3 class="text-xl font-bold mb-2">Live Timeline</h3>
+<p class="text-xs text-on-surface-variant uppercase tracking-wider">Real-time Progress</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10"></div>
+<div class="max-w-4xl mx-auto px-8 text-center relative z-10">
+<h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8">Ready to <span class="text-gradient">Innovate</span> Your Home?</h2>
+<p class="text-xl text-on-surface-variant mb-12">Experience the future of renovation where quality meets transparency.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-gradient-primary text-on-primary-container px-10 py-5 rounded-full font-black text-xl hover:shadow-[0_0_30px_rgba(0,210,253,0.4)] transition-all">
+                        Get a Free Quote
+                    </button>
+<button class="glass-panel text-on-surface px-10 py-5 rounded-full font-black text-xl border border-white/10 hover:bg-white/10 transition-all">
+                        Contact Lab
+                    </button>
+</div>
+</div>
+</section>
+<!-- Dynamic Lab Section (Placeholder for Parallax effect) -->
+<section class="py-32">
+<div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1 relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-tertiary/20 rounded-full blur-3xl"></div>
+<div class="glass-panel p-4 rounded-2xl transform -rotate-3 scale-105 border border-white/5 shadow-2xl">
+<img class="rounded-xl w-full aspect-video object-cover" data-alt="Abstract macro shot of vibrant paint mixing, turquoise and blue hues swirling with metallic particles, high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAQZ2ksC4oxpMB2dpOpdiEhifKXkCSz3V46bNdXQVf1XQGPEDOSu1_1M_77FfguWam0zl9gzWjt9RUeYXZ1ZYz9UeAZiYQP7aD4FPyMheOp5-0Sk_E_Nb-zhKzxpwkMucOtWmYcJCBMwe-mHlQenwKKeTJFfAUf5GmYXmTWI5ykmsdDVg4_6PPNtrDDQhaZ1zpkNkSlliJSzKtqW0CR3VcPEBwo08CF9RuES_Q9_m1C75XzzXJuyqE7PdSBna1zsSd12VPAQLou8Y"/>
+</div>
+<div class="absolute -bottom-10 -right-10 glass-panel p-6 rounded-2xl border border-white/20 shadow-xl max-w-[200px]">
+<p class="text-xs font-bold text-tertiary mb-2">INNOVATION SPOTLIGHT</p>
+<p class="text-sm font-medium">New 2024 Kinetic Color Collection now in Lab.</p>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-6">
+<div class="text-secondary font-bold tracking-widest text-sm uppercase">Innovation Center</div>
+<h2 class="text-5xl font-bold tracking-tight">The Paint Lab</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        Step into our virtual atelier. Our "Paint Lab" allows you to experiment with custom-mixed shades and revolutionary coatings that react to your room's natural light cycle. 
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+                            Custom Pigment Synthesis
+                        </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+                            Light Sensitivity Testing
+                        </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+                            AR Space Preview
+                        </li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#06092f] w-full py-12 px-8 border-t border-white/5">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-lg font-black text-[#94abf5]">Skypaint</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-[0.05rem]">
+<a class="text-white/40 hover:text-[#00d2fd] transition-colors" href="#">Privacy Policy</a>
+<a class="text-white/40 hover:text-[#00d2fd] transition-colors" href="#">Terms of Service</a>
+<a class="text-white/40 hover:text-[#00d2fd] transition-colors" href="#">Sustainability</a>
+<a class="text-white/40 hover:text-[#00d2fd] transition-colors" href="#">Careers</a>
+</div>
+<div class="text-white/40 font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-[0.05rem]">
+                © 2024 Skypaint Modern Renovations. Light is our Architect.
+            </div>
+</div>
+</footer>
+</body></html>

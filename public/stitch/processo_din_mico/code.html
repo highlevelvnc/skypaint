@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-secondary-fixed-variant": "#00586c",
+                  "on-secondary-fixed": "#003a47",
+                  "on-primary": "#0a2a6c",
+                  "on-surface": "#e3e3ff",
+                  "surface": "#06092f",
+                  "on-primary-container": "#001e5a",
+                  "tertiary-fixed-dim": "#00efce",
+                  "surface-container": "#101442",
+                  "secondary-dim": "#00c3eb",
+                  "on-surface-variant": "#a5a8d5",
+                  "tertiary": "#b6ffed",
+                  "on-tertiary-container": "#005d4f",
+                  "inverse-surface": "#fbf8ff",
+                  "surface-container-highest": "#1b2055",
+                  "on-error-container": "#ffa8a3",
+                  "on-tertiary-fixed-variant": "#006859",
+                  "tertiary-fixed": "#26fedc",
+                  "outline": "#6f729d",
+                  "on-primary-fixed-variant": "#112e71",
+                  "surface-bright": "#202660",
+                  "secondary-fixed-dim": "#1cd5ff",
+                  "primary-container": "#869ee7",
+                  "tertiary-container": "#26fedc",
+                  "surface-container-high": "#151a4c",
+                  "primary-dim": "#849be4",
+                  "secondary-container": "#00677e",
+                  "surface-tint": "#94abf5",
+                  "primary-fixed": "#8ea6f0",
+                  "on-secondary-container": "#eefaff",
+                  "background": "#06092f",
+                  "inverse-on-surface": "#4e527a",
+                  "on-background": "#e3e3ff",
+                  "inverse-primary": "#445ca0",
+                  "secondary": "#00d2fd",
+                  "tertiary-dim": "#00e8c9",
+                  "surface-variant": "#1b2055",
+                  "secondary-fixed": "#79dfff",
+                  "on-secondary": "#004352",
+                  "on-error": "#490006",
+                  "on-tertiary-fixed": "#00483d",
+                  "error-container": "#9f0519",
+                  "surface-dim": "#06092f",
+                  "outline-variant": "#41456c",
+                  "primary-fixed-dim": "#8199e1",
+                  "surface-container-lowest": "#000000",
+                  "on-tertiary": "#006657",
+                  "primary": "#94abf5",
+                  "error-dim": "#d7383b",
+                  "on-primary-fixed": "#000929",
+                  "surface-container-low": "#0a0e38",
+                  "error": "#ff716c"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Space Grotesk"],
+                  "body": ["Plus Jakarta Sans"],
+                  "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-panel {
+      background: rgba(27, 32, 85, 0.6);
+      backdrop-filter: blur(40px);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #94abf5 0%, #00d2fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .kinetic-border {
+      position: relative;
+    }
+    .kinetic-border::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #00d2fd, transparent);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary/30">
+<!-- TopNavBar Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#06092f]/60 backdrop-blur-xl shadow-[0_0_20px_rgba(148,171,245,0.1)] flex justify-between items-center px-8 py-4 max-w-full font-['Space_Grotesk'] tracking-tight">
+<div class="text-2xl font-bold bg-gradient-to-r from-[#94abf5] to-[#00d2fd] bg-clip-text text-transparent">Skypaint</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#94abf5]/70 hover:text-[#94abf5] transition-all duration-300" href="#">Services</a>
+<a class="text-[#94abf5]/70 hover:text-[#94abf5] transition-all duration-300" href="#">Portfolio</a>
+<a class="text-[#00d2fd] border-b-2 border-[#00d2fd] pb-1 transition-all duration-300" href="#">Process</a>
+<a class="text-[#94abf5]/70 hover:text-[#94abf5] transition-all duration-300" href="#">Consultation</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary-container font-bold px-6 py-2 rounded-full hover:scale-105 hover:shadow-[0_0_15px_rgba(0,210,253,0.3)] transition-all duration-300 active:scale-95">Book Now</button>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="px-8 lg:px-24 mb-32 relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="max-w-4xl relative z-10">
+<span class="label-md uppercase tracking-[0.2em] text-secondary font-semibold mb-4 block">The Kinetic Methodology</span>
+<h1 class="text-5xl md:text-7xl font-headline font-bold mb-6 tracking-tight leading-tight">
+          Crafting Spaces with <span class="text-gradient">Precision Energy</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+          Our process is a high-performance engine designed to transform your environment. From the first scan to the final stroke, light and technical rigor guide every move.
+        </p>
+</div>
+</section>
+<!-- Process Timeline Bento Grid -->
+<section class="px-8 lg:px-24 relative">
+<!-- Connection Line (Visual Only) -->
+<div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-outline-variant to-transparent opacity-30"></div>
+<div class="space-y-32">
+<!-- Step 1: Diagnosis -->
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+<div class="w-full lg:w-1/2 order-2 lg:order-1">
+<div class="glass-panel p-8 md:p-12 rounded-xl border border-outline-variant/10 hover:shadow-[0_0_30px_rgba(148,171,245,0.05)] transition-all duration-500">
+<span class="text-6xl font-headline font-extrabold text-outline-variant/20 block mb-4">01</span>
+<h3 class="text-3xl font-headline font-bold text-tertiary mb-4">Diagnosis</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6">
+                We begin with a technical audit of your surface. Using luminosity mapping and moisture sensors, we identify the molecular needs of your substrate before a single drop of paint is considered.
+              </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Substrate Structural Analysis
+                </li>
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Color Frequency Synchronization
+                </li>
+</ul>
+</div>
+</div>
+<div class="w-full lg:w-1/2 order-1 lg:order-2 flex justify-center">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-secondary to-tertiary rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+<div class="relative rounded-xl overflow-hidden aspect-video w-full max-w-lg bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Technical engineer using digital diagnostic scanner on a pristine modern wall surface in a high-tech laboratory setting with blue ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtkgb7pn_41BhRhZKPl40uQjNwLpgkYQ342l_dFpK-GCS5Ra7zTagfROZAzBQHHM8-esw6WdYOXTiK0yFI2p6-6-tGogbD-6RWKvQKDuZXFXtR3kPvyxMQi_HkCxp8AJyhz-A9p_nn01d5q64J08_7CGwFUitj8_ia3MLCR2CvSoeKEfq7TEymbf9PgDVBSWG5JtYqNiDOM6ulNU11P51bL8V6lKzhzP8TIKDWIVfcSN9xW8kuSybGnk1fCp80FyuEEybp7PUJBaY"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 2: Quote -->
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+<div class="w-full lg:w-1/2 flex justify-center">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+<div class="relative rounded-xl overflow-hidden aspect-square w-80 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Digital architectural blueprints glowing on a tablet screen in a dark room with electric blue highlights and technical data overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjdArznl1V-jm9d5V3jyxA_eBgvD4Onuxu3ogk1UsUsEKpCsP9i1jhvCvTjIk5D-pqUy3CfeJTk_cEBlOsEn2YioffmLu4kJmtvYGgJ7esgPB1hibBeJ34bII6-CVZKlRzbxhaZxGHLDxDopz6TUC0Eo_R7resA24NyAJxDSuuLs2hoyYMGdSbm7ioJG0jAx2mFVLOFPWMOzdKGdlbibg4wFz9tQewaRUo3wbeoQ9CWNudSWyqXUD6NfMKXlkJRGNHprxjuZgm_04"/>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="glass-panel p-8 md:p-12 rounded-xl border border-outline-variant/10 hover:shadow-[0_0_30px_rgba(148,171,245,0.05)] transition-all duration-500">
+<span class="text-6xl font-headline font-extrabold text-outline-variant/20 block mb-4">02</span>
+<h3 class="text-3xl font-headline font-bold text-secondary mb-4">Quote</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6">
+                Transparency powered by data. You receive a dynamic digital proposal featuring 3D visualizations and an exact breakdown of technical coatings and kinetic hours required.
+              </p>
+<div class="p-6 rounded-lg bg-surface-container-low border border-outline-variant/10">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant">Efficiency Rating</span>
+<span class="text-xs font-bold text-secondary">98%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full">
+<div class="w-[98%] h-full bg-secondary rounded-full shadow-[0_0_8px_#00d2fd]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3: Execution -->
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+<div class="w-full lg:w-1/2 order-2 lg:order-1">
+<div class="glass-panel p-8 md:p-12 rounded-xl border border-outline-variant/10 hover:shadow-[0_0_30px_rgba(148,171,245,0.05)] transition-all duration-500">
+<span class="text-6xl font-headline font-extrabold text-outline-variant/20 block mb-4">03</span>
+<h3 class="text-3xl font-headline font-bold text-primary mb-4">Execution</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6">
+                Our technicians are kinetic artists. Using low-VOC electric coatings and precision application technology, we revitalize your space with surgical speed and zero atmospheric impact.
+              </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="text-center p-4 rounded-lg bg-surface-container-high">
+<span class="material-symbols-outlined text-secondary block mb-2">speed</span>
+<span class="text-xs uppercase font-bold tracking-tighter">Fast-Pulse</span>
+</div>
+<div class="text-center p-4 rounded-lg bg-surface-container-high">
+<span class="material-symbols-outlined text-tertiary block mb-2">eco</span>
+<span class="text-xs uppercase font-bold tracking-tighter">Bio-Coating</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 order-1 lg:order-2">
+<div class="relative grid grid-cols-2 gap-4 h-[400px]">
+<div class="relative rounded-xl overflow-hidden h-full group">
+<img class="w-full h-full object-cover transition duration-700 group-hover:scale-110" data-alt="Professional painter in futuristic white protective gear applying neon-lit paint to an industrial wall with precision tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhajOmNE1h7dzCpTIIATTz6BsR9uPtKo2O2BQLwfK6gj_Wn0h56i-nZGvshCjCspKpJYB1Jxaad7IBUEcwnbGbPyxJIQH8fc45zs6OMC8x61-3IuT4D2-7R2cPGEtX-h-uLuMrjAUV4P5xAAoW1f1hjXub1VgyHuwuKJZ8574WByt7l69ptXFpYzEI4mphZhP4y1biFEcFDuikmCJG2Lo3nbBR-dFokH843z6NdzjunkpdVaSKQKLe5Wzn9kbI6VEFDggXvc8Fjq8"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+</div>
+<div class="relative rounded-xl overflow-hidden h-full mt-12 group">
+<img class="w-full h-full object-cover transition duration-700 group-hover:scale-110" data-alt="Macro close-up of vibrant electric blue paint swirling with metallic particles under high-contrast studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKx2xiLq-cdnDEGt3HRbi8VQxtqq6s7-jJAcThcZPyd2BA24xvmywtTAeY6yi1Tvi9TFVz_8RrDaMQb7BK1Blm0Q2SqIUGYvdvNaiwt7oaCjzWAGg_04qrNPKo5bvnV6xQxbGl-n8KBl3xd6vDP7iF-ELUf-yTKaBRRn50L5XbouGs1rC-du2MkidZ3J1DK3HVWpugPnxUrmmbc3RBoiHHBfnV0ycBSHC6nX1D7V4n8sDJjoFD_NCeBHVWv2EuCTGWR9Lb43mNa9w"/>
+<div class="absolute inset-0 bg-secondary/20 mix-blend-overlay"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 4: Delivery -->
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+<div class="w-full lg:w-1/2 flex justify-center">
+<div class="relative">
+<div class="absolute -inset-10 bg-tertiary/10 rounded-full blur-[60px]"></div>
+<div class="relative glass-panel p-6 rounded-2xl border border-tertiary/20 max-w-sm rotate-3 hover:rotate-0 transition-transform duration-500">
+<div class="aspect-square rounded-xl overflow-hidden mb-6">
+<img class="w-full h-full object-cover" data-alt="Stunning modern minimalist office interior with floor-to-ceiling glass windows and perfectly finished walls reflecting soft neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB8LE0ybTg_jB5gBXGrBAQb9SzoAHHFDWtQ111q0DwT7jJOsWFLQevjg9w51Zu9idX3a1croP3zCinoIn8yUn3eGqSQnA-9p4z0LMSCWeiEdM46Jxb2ghVdDxiuprNGSfFW4LhpiMEsq0e4Y2Gyy_8hKjlsI0zgRGwmqTjpCKS1hMZ4jFflRqjyHnDJmpDBG3ca3Tu6l5rUu8hQcevcwce64_Y_yj4jgJFdyvu__8m3Gd2aDSA0JeELto7wiozl1cJ9nkDAj3H9bc"/>
+</div>
+<h4 class="font-headline font-bold text-tertiary text-xl">The Warranty Shield</h4>
+<p class="text-sm text-on-surface-variant mt-2">10-Year Molecular Integrity Guarantee.</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="glass-panel p-8 md:p-12 rounded-xl border border-outline-variant/10 hover:shadow-[0_0_30px_rgba(182,255,237,0.05)] transition-all duration-500">
+<span class="text-6xl font-headline font-extrabold text-outline-variant/20 block mb-4">04</span>
+<h3 class="text-3xl font-headline font-bold text-tertiary mb-4">Delivery &amp; Warranty</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                Your space is delivered in its final, illuminated form. We provide a digital kinetic twin for future maintenance and a 10-year warranty that covers chromatic stability and substrate bond.
+              </p>
+<button class="flex items-center gap-2 text-secondary font-bold uppercase tracking-widest text-xs group">
+                Learn about the shield 
+                <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="mt-48 px-8 lg:px-24">
+<div class="relative py-24 rounded-3xl overflow-hidden bg-surface-container-high">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"></div>
+<div class="relative z-10 text-center max-w-3xl mx-auto px-6">
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-8 tracking-tight">Ready to initiate your <span class="text-gradient">renovation pulse</span>?</h2>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary-container font-bold px-10 py-4 rounded-full text-lg hover:scale-105 transition-all">Start Diagnosis</button>
+<button class="bg-surface-bright/20 border border-outline-variant/20 backdrop-blur-md text-on-surface font-bold px-10 py-4 rounded-full text-lg hover:bg-surface-bright/40 transition-all">View Portfolio</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#06092f] flex flex-col md:flex-row justify-between items-center px-12 py-8 border-t border-[#94abf5]/10 w-full mt-auto font-['Plus_Jakarta_Sans'] text-sm tracking-wide">
+<div class="text-lg font-bold text-[#b6ffed] mb-4 md:mb-0">Skypaint</div>
+<div class="flex gap-8 mb-6 md:mb-0">
+<a class="text-[#94abf5]/50 hover:text-[#b6ffed] hover:underline decoration-[#00d2fd] transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="text-[#94abf5]/50 hover:text-[#b6ffed] hover:underline decoration-[#00d2fd] transition-colors duration-200" href="#">Terms of Service</a>
+<a class="text-[#94abf5]/50 hover:text-[#b6ffed] hover:underline decoration-[#00d2fd] transition-colors duration-200" href="#">Sustainability</a>
+<a class="text-[#94abf5]/50 hover:text-[#b6ffed] hover:underline decoration-[#00d2fd] transition-colors duration-200" href="#">Contact</a>
+</div>
+<div class="text-[#94abf5] opacity-60">
+      © 2024 Skypaint Kinetic Renovations. All rights reserved.
+    </div>
+</footer>
+</body></html>

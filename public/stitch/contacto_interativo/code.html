@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#00586c",
+                    "on-secondary-fixed": "#003a47",
+                    "on-primary": "#0a2a6c",
+                    "on-surface": "#e3e3ff",
+                    "surface": "#06092f",
+                    "on-primary-container": "#001e5a",
+                    "tertiary-fixed-dim": "#00efce",
+                    "surface-container": "#101442",
+                    "secondary-dim": "#00c3eb",
+                    "on-surface-variant": "#a5a8d5",
+                    "tertiary": "#b6ffed",
+                    "on-tertiary-container": "#005d4f",
+                    "inverse-surface": "#fbf8ff",
+                    "surface-container-highest": "#1b2055",
+                    "on-error-container": "#ffa8a3",
+                    "on-tertiary-fixed-variant": "#006859",
+                    "tertiary-fixed": "#26fedc",
+                    "outline": "#6f729d",
+                    "on-primary-fixed-variant": "#112e71",
+                    "surface-bright": "#202660",
+                    "secondary-fixed-dim": "#1cd5ff",
+                    "primary-container": "#869ee7",
+                    "tertiary-container": "#26fedc",
+                    "surface-container-high": "#151a4c",
+                    "primary-dim": "#849be4",
+                    "secondary-container": "#00677e",
+                    "surface-tint": "#94abf5",
+                    "primary-fixed": "#8ea6f0",
+                    "on-secondary-container": "#eefaff",
+                    "background": "#06092f",
+                    "inverse-on-surface": "#4e527a",
+                    "on-background": "#e3e3ff",
+                    "inverse-primary": "#445ca0",
+                    "secondary": "#00d2fd",
+                    "tertiary-dim": "#00e8c9",
+                    "surface-variant": "#1b2055",
+                    "secondary-fixed": "#79dfff",
+                    "on-secondary": "#004352",
+                    "on-error": "#490006",
+                    "on-tertiary-fixed": "#00483d",
+                    "error-container": "#9f0519",
+                    "surface-dim": "#06092f",
+                    "outline-variant": "#41456c",
+                    "primary-fixed-dim": "#8199e1",
+                    "surface-container-lowest": "#000000",
+                    "on-tertiary": "#006657",
+                    "primary": "#94abf5",
+                    "error-dim": "#d7383b",
+                    "on-primary-fixed": "#000929",
+                    "surface-container-low": "#0a0e38",
+                    "error": "#ff716c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(27, 32, 85, 0.6);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+        }
+        .kinetic-bg {
+            background: radial-gradient(circle at 20% 30%, rgba(148, 171, 245, 0.05) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(0, 210, 253, 0.05) 0%, transparent 40%);
+        }
+        input:focus ~ .glow-line, textarea:focus ~ .glow-line {
+            width: 100%;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body kinetic-bg min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#06092f]/60 backdrop-blur-xl shadow-[0_0_20px_rgba(148,171,245,0.1)] flex justify-between items-center px-8 py-4 max-w-full">
+<div class="text-2xl font-bold bg-gradient-to-r from-[#94abf5] to-[#00d2fd] bg-clip-text text-transparent font-headline tracking-tight">
+            Skypaint
+        </div>
+<div class="hidden md:flex items-center space-x-8 font-headline tracking-tight">
+<a class="text-[#94abf5]/70 hover:text-[#94abf5] hover:scale-105 transition-all duration-300" href="#">Services</a>
+<a class="text-[#94abf5]/70 hover:text-[#94abf5] hover:scale-105 transition-all duration-300" href="#">Portfolio</a>
+<a class="text-[#94abf5]/70 hover:text-[#94abf5] hover:scale-105 transition-all duration-300" href="#">Process</a>
+<a class="text-[#94abf5]/70 hover:text-[#94abf5] hover:scale-105 transition-all duration-300" href="#">Consultation</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary-container font-headline font-bold px-6 py-2.5 rounded-full hover:scale-105 hover:shadow-[0_0_15px_rgba(0,210,253,0.3)] transition-all duration-300 active:scale-95">
+                Book Now
+            </button>
+</div>
+</nav>
+<main class="flex-grow pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto w-full">
+<!-- Hero Section -->
+<div class="mb-16">
+<span class="text-secondary font-label font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Get In Touch</span>
+<h1 class="text-5xl md:text-7xl font-headline font-bold text-on-surface tracking-tighter mb-6 leading-none">
+                Let's manifest <br/> <span class="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">your vision.</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl font-body leading-relaxed">
+                Whether you're in the heart of Lisbon or the coast of Cascais, our kinetic renovation team is ready to redefine your space with light and precision.
+            </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Form Section (Bento Style) -->
+<div class="lg:col-span-7">
+<div class="glass-panel p-8 md:p-12 rounded-xl relative overflow-hidden group">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all duration-700"></div>
+<form class="space-y-8 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative group/field">
+<label class="block text-secondary-dim font-label text-xs uppercase tracking-widest mb-2 transition-colors group-focus-within/field:text-secondary">Full Name</label>
+<input class="w-full bg-surface-container-highest border-none focus:ring-0 text-on-surface p-4 rounded-lg placeholder-on-surface-variant/30" placeholder="Artur Silva" type="text"/>
+<div class="glow-line absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-tertiary opacity-0 transition-all duration-500"></div>
+</div>
+<div class="relative group/field">
+<label class="block text-secondary-dim font-label text-xs uppercase tracking-widest mb-2 transition-colors group-focus-within/field:text-secondary">Email Address</label>
+<input class="w-full bg-surface-container-highest border-none focus:ring-0 text-on-surface p-4 rounded-lg placeholder-on-surface-variant/30" placeholder="artur@skypaint.pt" type="email"/>
+<div class="glow-line absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-tertiary opacity-0 transition-all duration-500"></div>
+</div>
+</div>
+<div class="relative group/field">
+<label class="block text-secondary-dim font-label text-xs uppercase tracking-widest mb-2 transition-colors group-focus-within/field:text-secondary">Project Location</label>
+<select class="w-full bg-surface-container-highest border-none focus:ring-0 text-on-surface p-4 rounded-lg appearance-none">
+<option>Lisbon Center</option>
+<option>Cascais Marina</option>
+<option>Estoril Coast</option>
+<option>Sintra Hills</option>
+<option>Oeiras Valley</option>
+</select>
+<div class="glow-line absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-tertiary opacity-0 transition-all duration-500"></div>
+</div>
+<div class="relative group/field">
+<label class="block text-secondary-dim font-label text-xs uppercase tracking-widest mb-2 transition-colors group-focus-within/field:text-secondary">Message</label>
+<textarea class="w-full bg-surface-container-highest border-none focus:ring-0 text-on-surface p-4 rounded-lg placeholder-on-surface-variant/30" placeholder="Tell us about your dream renovation..." rows="4"></textarea>
+<div class="glow-line absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-secondary to-tertiary opacity-0 transition-all duration-500"></div>
+</div>
+<button class="w-full py-5 bg-gradient-to-r from-primary to-secondary text-on-primary-container font-headline font-bold text-lg rounded-full hover:shadow-[0_0_30px_rgba(0,210,253,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 flex justify-center items-center gap-3" type="submit">
+                            Initiate Project
+                            <span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Contact Info & Area List -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Direct Contact Cards -->
+<div class="grid grid-cols-1 gap-6">
+<a class="glass-panel p-6 rounded-xl flex items-center gap-6 hover:scale-105 transition-all duration-300 group" href="tel:+351210000000">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<div>
+<p class="text-on-surface-variant font-label text-xs uppercase tracking-widest">Call our Studio</p>
+<p class="text-xl font-headline font-medium">+351 210 000 000</p>
+</div>
+</a>
+<a class="glass-panel p-6 rounded-xl flex items-center gap-6 hover:scale-105 transition-all duration-300 group" href="#">
+<div class="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</div>
+<div>
+<p class="text-on-surface-variant font-label text-xs uppercase tracking-widest">WhatsApp Kinetic Support</p>
+<p class="text-xl font-headline font-medium">Chat with a Designer</p>
+</div>
+</a>
+</div>
+<!-- Service Areas List -->
+<div class="bg-surface-container-low p-8 rounded-xl">
+<h3 class="text-tertiary font-headline text-2xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+                        Active Zones
+                    </h3>
+<div class="grid grid-cols-2 gap-x-4 gap-y-3">
+<div class="flex items-center gap-2 text-on-surface/80 group">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<span class="font-body hover:text-secondary transition-colors cursor-default">Alfama</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface/80 group">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<span class="font-body hover:text-secondary transition-colors cursor-default">Príncipe Real</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface/80 group">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<span class="font-body hover:text-secondary transition-colors cursor-default">Chiado</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface/80 group">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<span class="font-body hover:text-secondary transition-colors cursor-default">Cascais Marina</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface/80 group">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<span class="font-body hover:text-secondary transition-colors cursor-default">Estoril</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface/80 group">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<span class="font-body hover:text-secondary transition-colors cursor-default">Guincho</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface/80 group">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<span class="font-body hover:text-secondary transition-colors cursor-default">Oeiras</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface/80 group">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+<span class="font-body hover:text-secondary transition-colors cursor-default">Sintra</span>
+</div>
+</div>
+</div>
+<!-- Map Integration (Visual Placeholder) -->
+<div class="relative h-48 rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover grayscale opacity-40 group-hover:opacity-60 transition-opacity duration-500" data-alt="stylized dark technical map of Lisbon and Cascais coastline with minimalist neon blue glowing lines and navigation markers" data-location="Lisbon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfIHgkviBIn18GfgZP0AnWSiRdOKVdD6GMv-uaItKIeZJFJb4xpujko6j7nbABLlH_N7HeWpjvEQx3KKRhkRYlGzneJLY6aHO1iASrrB8X5E3cpwyjyyX6rvNUWNa5K4POvMs3fC0RinDmOho6qvhU3CJrBB2wzo36K5RizITrTZgXu_Y2y66lZW17gsl1nO7f11HR4NXyq1PDDKUWMCgSioEeyd7vHIQ5HTW2_kZzu0dQDyLAUrp_gYvyp0PeP7oiejij3AOFXBI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="explore">explore</span>
+<span class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Lisbon Studio</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#06092f] w-full mt-auto flex flex-col md:flex-row justify-between items-center px-12 py-8 border-t border-[#94abf5]/10">
+<div class="mb-6 md:mb-0">
+<span class="text-lg font-bold text-[#b6ffed] font-headline">Skypaint</span>
+<p class="text-[#94abf5]/50 font-body text-sm tracking-wide mt-1">© 2024 Skypaint Kinetic Renovations. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-body text-sm tracking-wide">
+<a class="text-[#94abf5]/50 hover:text-[#b6ffed] hover:underline decoration-[#00d2fd] transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="text-[#94abf5]/50 hover:text-[#b6ffed] hover:underline decoration-[#00d2fd] transition-colors duration-200" href="#">Terms of Service</a>
+<a class="text-[#94abf5]/50 hover:text-[#b6ffed] hover:underline decoration-[#00d2fd] transition-colors duration-200" href="#">Sustainability</a>
+<a class="text-[#94abf5]/50 hover:text-[#b6ffed] hover:underline decoration-[#00d2fd] transition-colors duration-200" href="#">Contact</a>
+</div>
+</footer>
+</body></html>
