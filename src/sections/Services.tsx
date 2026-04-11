@@ -8,7 +8,9 @@ import {
   Wrench,
   ArrowRight,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { SERVICES } from "../data/site";
+import { SERVICE_SEO } from "../data/service-seo";
 import { Reveal } from "../components/Reveal";
 import { AnimatedCounter } from "../components/AnimatedCounter";
 
@@ -75,13 +77,13 @@ export default function Services() {
               <p className="text-[#a5a8d5] max-w-lg mb-6 leading-relaxed">
                 {SERVICES[1].short}
               </p>
-              <a
-                href="#trabalhos"
+              <Link
+                to={`/${SERVICE_SEO[1].slug}`}
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#00d2fd]/10 border border-[#00d2fd]/20 text-[#00d2fd] text-sm font-medium transition-colors duration-300 hover:bg-[#00d2fd]/20 w-fit"
               >
-                Ver trabalhos
+                Ver detalhes
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </Reveal>
 

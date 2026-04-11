@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { SITE } from "../data/site";
 import { cn } from "../lib/cn";
 
@@ -41,18 +42,18 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-8">
         {/* Brand */}
-        <a href="#top" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <span className="bg-gradient-to-r from-[#94abf5] to-[#00d2fd] bg-clip-text text-2xl font-bold tracking-tight text-transparent">
             {SITE.brand}
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <ul className="hidden items-center gap-8 md:flex">
           {LINKS.map((l) => (
             <li key={l.id}>
-              <a
-                href={`#${l.id}`}
+              <Link
+                to={`/#${l.id}`}
                 onClick={() => setActive(l.id)}
                 className={cn(
                   "font-headline text-sm tracking-tight transition-colors duration-300",
@@ -62,7 +63,7 @@ export default function Navbar() {
                 )}
               >
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -78,12 +79,12 @@ export default function Navbar() {
           </a>
 
           {/* CTA button */}
-          <a
-            href="#contacto"
+          <Link
+            to="/#contacto"
             className="hidden bg-gradient-primary text-on-primary-container px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(0,210,253,0.3)] active:brightness-110 md:inline-flex"
           >
             Pedir Orçamento
-          </a>
+          </Link>
 
           {/* Mobile hamburger */}
           <button
@@ -117,8 +118,8 @@ export default function Navbar() {
         <ul className="mx-auto flex max-w-7xl flex-col gap-1 px-8 pb-6">
           {LINKS.map((l) => (
             <li key={l.id}>
-              <a
-                href={`#${l.id}`}
+              <Link
+                to={`/#${l.id}`}
                 onClick={() => {
                   setActive(l.id);
                   setOpen(false);
@@ -131,17 +132,17 @@ export default function Navbar() {
                 )}
               >
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
           <li>
-            <a
-              href="#contacto"
+            <Link
+              to="/#contacto"
               onClick={() => setOpen(false)}
               className="mt-2 block bg-gradient-primary text-on-primary-container px-6 py-3 rounded-full font-bold text-sm text-center shadow-[0_0_15px_rgba(0,210,253,0.3)] active:brightness-110"
             >
               Pedir Orçamento
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Loader from "./components/Loader";
-import Navbar from "./components/Navbar";
-import FloatingCTA from "./components/FloatingCTA";
-import Marquee from "./components/Marquee";
-import Hero from "./sections/Hero";
-import Services from "./sections/Services";
-import Process from "./sections/Process";
-import Portfolio from "./sections/Portfolio";
-import Contact from "./sections/Contact";
-import Footer from "./sections/Footer";
+
+const Home = lazy(() => import("./pages/Home"));
+const ServicePage = lazy(() => import("./pages/ServicePage"));
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
@@ -17,28 +20,19 @@ export default function App() {
     <>
       <Loader onComplete={() => setLoaded(true)} />
       <div className={`relative ${loaded ? "" : "pointer-events-none"}`}>
-        <Navbar />
-        <main className="relative">
-          <Hero />
-          <Marquee
-            items={[
-              "Pintura",
-              "Reformas",
-              "Pladur",
-              "Deck",
-              "Cerâmica",
-              "Banheiro",
-              "Trabalho em corda",
-              "Marido de aluguer",
-            ]}
-          />
-          <Services />
-          <Process />
-          <Portfolio />
-          <Contact />
-        </main>
-        <Footer />
-        <FloatingCTA />
+        <ScrollToTop />
+        <Suspense
+          fallback={
+            <div className="min-h-screen bg-surface flex items-center justify-center">
+              <div className="w-8 h-8 border-2 border-secondary/30 border-t-secondary rounded-full animate-spin" />
+            </div>
+          }
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/:slug" element={<ServicePage />} />
+          </Routes>
+        </Suspense>
       </div>
     </>
   );

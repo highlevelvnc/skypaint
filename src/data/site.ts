@@ -37,8 +37,8 @@ export const SERVICES: Service[] = [
       "Preparação completa: lixado, betumado e isolamento",
       "Atenção aos detalhes em molduras e acabamentos",
     ],
-    cover: "/images/painting/painting-6.jpeg",
-    gallery: Array.from({ length: 16 }, (_, i) => `/images/painting/painting-${i + 1}.jpeg`),
+    cover: "/images/painting/painting-6.webp",
+    gallery: Array.from({ length: 16 }, (_, i) => `/images/painting/painting-${i + 1}.webp`),
   },
   {
     id: "predial",
@@ -53,8 +53,8 @@ export const SERVICES: Service[] = [
       "Pintura de fachadas e edifícios verticais",
       "Sem custos com andaimes — solução ágil",
     ],
-    cover: "/images/rope/rope-3.jpeg",
-    gallery: Array.from({ length: 3 }, (_, i) => `/images/rope/rope-${i + 1}.jpeg`),
+    cover: "/images/rope/rope-3.webp",
+    gallery: Array.from({ length: 3 }, (_, i) => `/images/rope/rope-${i + 1}.webp`),
   },
   {
     id: "banheiro",
@@ -69,8 +69,8 @@ export const SERVICES: Service[] = [
       "Instalação de louças, móveis e box",
       "Revestimentos cerâmicos premium",
     ],
-    cover: "/images/bathroom/bathroom-5.jpeg",
-    gallery: Array.from({ length: 7 }, (_, i) => `/images/bathroom/bathroom-${i + 1}.jpeg`),
+    cover: "/images/bathroom/bathroom-5.webp",
+    gallery: Array.from({ length: 7 }, (_, i) => `/images/bathroom/bathroom-${i + 1}.webp`),
   },
   {
     id: "deck",
@@ -85,8 +85,8 @@ export const SERVICES: Service[] = [
       "Restauro, lixado e re-envernizamento",
       "Acabamentos resistentes ao clima atlântico",
     ],
-    cover: "/images/deck/deck-1.jpeg",
-    gallery: Array.from({ length: 2 }, (_, i) => `/images/deck/deck-${i + 1}.jpeg`),
+    cover: "/images/deck/deck-1.webp",
+    gallery: Array.from({ length: 2 }, (_, i) => `/images/deck/deck-${i + 1}.webp`),
   },
   {
     id: "pladur",
@@ -101,8 +101,8 @@ export const SERVICES: Service[] = [
       "Nichos, prateleiras e mobiliário embutido",
       "Acabamento liso pronto para pintura",
     ],
-    cover: "/images/pladur/pladur-1.jpeg",
-    gallery: Array.from({ length: 2 }, (_, i) => `/images/pladur/pladur-${i + 1}.jpeg`),
+    cover: "/images/pladur/pladur-1.webp",
+    gallery: Array.from({ length: 2 }, (_, i) => `/images/pladur/pladur-${i + 1}.webp`),
   },
   {
     id: "ceramico",
@@ -117,8 +117,8 @@ export const SERVICES: Service[] = [
       "Impermeabilização prévia de áreas húmidas",
       "Cortes precisos e acabamentos perfeitos",
     ],
-    cover: "/images/ceramic/ceramic-3.jpeg",
-    gallery: Array.from({ length: 4 }, (_, i) => `/images/ceramic/ceramic-${i + 1}.jpeg`),
+    cover: "/images/ceramic/ceramic-3.webp",
+    gallery: Array.from({ length: 4 }, (_, i) => `/images/ceramic/ceramic-${i + 1}.webp`),
   },
   {
     id: "marido",
@@ -133,8 +133,8 @@ export const SERVICES: Service[] = [
       "Substituição de fechaduras e dobradiças",
       "Atendimento rápido e flexível",
     ],
-    cover: "/images/handyman/handyman-2.jpeg",
-    gallery: Array.from({ length: 3 }, (_, i) => `/images/handyman/handyman-${i + 1}.jpeg`),
+    cover: "/images/handyman/handyman-2.webp",
+    gallery: Array.from({ length: 3 }, (_, i) => `/images/handyman/handyman-${i + 1}.webp`),
   },
 ];
 
