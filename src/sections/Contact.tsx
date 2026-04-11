@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <section
       id="contacto"
-      className="relative kinetic-bg min-h-screen pt-32 pb-20 px-6 md:px-12"
+      className="relative kinetic-bg min-h-screen pt-20 sm:pt-24 md:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 md:px-12"
     >
       {/* Header */}
       <div className="max-w-7xl mx-auto mb-16">
@@ -26,7 +26,7 @@ export default function Contact() {
           <span className="label-md text-secondary mb-4 block">
             Fale Connosco
           </span>
-          <h1 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter mb-6 leading-none">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-headline font-bold tracking-tighter mb-6 leading-none">
             Vamos construir{" "}
             <br className="hidden md:block" />
             <span className="text-gradient-full">a sua visão.</span>
@@ -38,7 +38,7 @@ export default function Contact() {
         </Reveal>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-12">
         {/* ─── Form ─── */}
         <Reveal className="lg:col-span-7" duration={700}>
           <div className="glass-panel p-8 md:p-12 rounded-xl relative overflow-hidden group">
@@ -46,7 +46,7 @@ export default function Contact() {
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all duration-700 pointer-events-none" />
 
             <form
-              className="space-y-8 relative z-10"
+              className="space-y-6 sm:space-y-8 relative z-10"
               onSubmit={(e) => {
                 e.preventDefault();
                 const fd = new FormData(e.currentTarget);
@@ -59,7 +59,7 @@ export default function Contact() {
                 window.open(`${SITE.whatsapp}?text=${text}`, "_blank");
               }}
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 {/* Name */}
                 <div className="relative group/f">
                   <label className="block text-[#00c3eb] font-label text-xs uppercase tracking-widest mb-2 transition-colors group-focus-within/f:text-secondary">
@@ -142,7 +142,7 @@ export default function Contact() {
           <Reveal delay={100}>
             <a
               href={`tel:${SITE.phoneTel}`}
-              className="glass-panel p-6 rounded-xl flex items-center gap-6 hover:scale-[1.03] transition-all duration-300 group block"
+              className="glass-panel p-6 rounded-xl flex items-center gap-6 hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 group block"
             >
               <div className="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300">
                 <Phone size={20} />
@@ -164,7 +164,7 @@ export default function Contact() {
               href={SITE.whatsapp}
               target="_blank"
               rel="noreferrer"
-              className="glass-panel p-6 rounded-xl flex items-center gap-6 hover:scale-[1.03] transition-all duration-300 group block"
+              className="glass-panel p-6 rounded-xl flex items-center gap-6 hover:scale-[1.03] active:scale-[0.97] transition-all duration-300 group block"
             >
               <div className="w-14 h-14 rounded-full bg-surface-container-high flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors duration-300">
                 <MessageCircle size={20} />

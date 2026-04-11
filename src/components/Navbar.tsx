@@ -88,7 +88,7 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setOpen(!open)}
-            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full md:hidden"
+            className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-full md:hidden"
             aria-label="Menu"
           >
             <span
@@ -124,7 +124,7 @@ export default function Navbar() {
                   setOpen(false);
                 }}
                 className={cn(
-                  "block rounded-lg px-4 py-3 font-headline text-sm tracking-tight transition-colors duration-300",
+                  "block rounded-lg px-4 py-4 font-headline text-sm tracking-tight transition-colors duration-300",
                   active === l.id
                     ? "text-[#00d2fd]"
                     : "text-[#94abf5]/70 hover:text-[#94abf5]"

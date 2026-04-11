@@ -43,16 +43,16 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="relative py-32 bg-surface"
+      className="relative py-16 sm:py-24 md:py-32 bg-surface"
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12 sm:mb-16">
           <Reveal className="max-w-2xl" duration={700}>
             <span className="label-md text-secondary mb-4 block">
               Portefólio
             </span>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
               Projetos reais.{" "}
               <span className="text-gradient">Resultados visíveis.</span>
             </h2>
@@ -70,7 +70,7 @@ export default function Portfolio() {
               key={f.id}
               onClick={() => setFilter(f.id)}
               className={cn(
-                "px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300",
+                "px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300",
                 filter === f.id
                   ? "bg-gradient-primary text-on-primary-container shadow-[0_0_12px_rgba(0,210,253,0.3)]"
                   : "bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest hover:text-white"
@@ -82,7 +82,7 @@ export default function Portfolio() {
         </Reveal>
 
         {/* Bento grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 auto-rows-[160px] sm:auto-rows-[200px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-3 md:gap-4 auto-rows-[200px] sm:auto-rows-[180px] md:auto-rows-[200px]">
           {projects.slice(0, 14).map((p, i) => {
             const patterns = [
               "row-span-2 col-span-2",

@@ -51,7 +51,7 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#b6ffed]/5 blur-[160px] rounded-full pointer-events-none" />
 
       {/* ── Two-column grid ── */}
-      <div className="relative max-w-7xl mx-auto px-8 w-full grid md:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 w-full grid md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
         {/* ─── Left column: text ─── */}
         <div>
           {/* Badge pill */}
@@ -60,7 +60,7 @@ export default function Hero() {
               className="inline-block px-4 py-1 rounded-full border border-[#41456c]/30 bg-[#151a4c]/50 backdrop-blur-md"
               style={show(1)}
             >
-              <span className="text-xs font-bold tracking-widest text-[#b6ffed] uppercase">
+              <span className="text-[10px] sm:text-xs font-bold tracking-widest text-[#b6ffed] uppercase">
                 Acabamentos de Precis&atilde;o
               </span>
             </span>
@@ -68,7 +68,7 @@ export default function Hero() {
 
           {/* H1 */}
           <h1
-            className="text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter mt-6"
+            className="text-4xl sm:text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter mt-6"
             style={show(2)}
           >
             Acabamentos{" "}
@@ -77,7 +77,7 @@ export default function Hero() {
 
           {/* Paragraph */}
           <p
-            className="text-[#a5a8d5] text-lg max-w-md leading-relaxed mt-6"
+            className="text-[#a5a8d5] text-base sm:text-lg max-w-md leading-relaxed mt-6"
             style={show(3)}
           >
             Equipa especializada em pintura, reformas e acabamentos de
@@ -89,13 +89,13 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-4 pt-4 mt-4" style={show(4)}>
             <a
               href="#contacto"
-              className="bg-gradient-primary text-[#001e5a] px-8 py-4 rounded-full font-bold text-lg btn-magnetic shadow-lg"
+              className="bg-gradient-primary text-[#001e5a] px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-lg btn-magnetic shadow-lg"
             >
               Iniciar Projeto
             </a>
             <a
               href="#trabalhos"
-              className="px-8 py-4 rounded-full border border-[#41456c]/50 font-bold text-lg hover:bg-[#202660]/20 transition-all text-white"
+              className="px-6 py-3.5 sm:px-8 sm:py-4 rounded-full border border-[#41456c]/50 font-bold text-lg hover:bg-[#202660]/20 transition-all text-white"
             >
               Ver Trabalhos
             </a>
@@ -109,7 +109,7 @@ export default function Hero() {
             <div className="absolute -inset-4 bg-gradient-to-r from-[#94abf5] to-[#00d2fd] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-700 rounded-3xl" />
 
             {/* Card */}
-            <div className="relative glass-panel rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl border border-white/10">
+            <div className="relative glass-panel rounded-3xl overflow-hidden aspect-square sm:aspect-[4/5] shadow-2xl border border-white/10">
               <img
                 src={heroImage}
                 alt="Acabamento de escada em madeira com iluminacao LED"
@@ -129,7 +129,7 @@ export default function Hero() {
 
               {/* Floating badge */}
               <div
-                className="absolute top-10 right-10 p-4 glass-panel rounded-2xl border border-white/20 animate-float"
+                className="absolute top-10 right-10 p-4 glass-panel rounded-2xl border border-white/20 animate-float hidden sm:block"
                 style={show(6)}
               >
                 <span className="text-xs font-bold uppercase tracking-widest text-[#b6ffed]">

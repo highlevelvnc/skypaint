@@ -4,22 +4,22 @@ import { CheckCircle, Zap, Leaf } from "lucide-react";
 
 export default function Process() {
   return (
-    <section id="processo" className="relative py-32 overflow-hidden">
+    <section id="processo" className="relative py-16 sm:py-24 md:py-32 overflow-hidden">
       {/* Background orbs */}
       <div className="absolute -top-24 -right-24 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Hero heading */}
-      <div className="px-8 lg:px-24 mb-32 relative z-10 max-w-7xl mx-auto">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-24 mb-16 sm:mb-24 md:mb-32 relative z-10 max-w-7xl mx-auto">
         <Reveal>
           <span className="label-md text-secondary mb-4 block">
             A Metodologia Skypaint
           </span>
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6">
             Espaços construídos com{" "}
             <span className="text-gradient">Energia & Precisão</span>
           </h2>
-          <p className="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
             O nosso processo é uma máquina de alta performance desenhada para
             transformar o seu espaço. Do primeiro diagnóstico ao último
             acabamento, rigor técnico e atenção ao detalhe guiam cada passo.
@@ -28,11 +28,11 @@ export default function Process() {
       </div>
 
       {/* Timeline */}
-      <div className="px-8 lg:px-24 relative max-w-7xl mx-auto">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-24 relative max-w-7xl mx-auto">
         {/* Vertical connection line */}
         <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-outline-variant/30 to-transparent" />
 
-        <div className="space-y-32">
+        <div className="space-y-16 sm:space-y-24 md:space-y-32">
           {PROCESS_STEPS.map((s, i) => {
             const isEven = i % 2 === 0;
             const colors = [
@@ -51,18 +51,18 @@ export default function Process() {
             return (
               <Reveal key={s.step} delay={i * 80}>
                 <div
-                  className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-24 ${
+                  className={`flex flex-col lg:flex-row items-center gap-6 sm:gap-8 md:gap-12 lg:gap-24 ${
                     isEven ? "" : "lg:flex-row-reverse"
                   }`}
                 >
                   {/* Glass panel */}
                   <div className="w-full lg:w-1/2">
-                    <div className="glass-panel p-8 md:p-12 rounded-xl border border-outline-variant/10 hover:shadow-[0_0_30px_rgba(148,171,245,0.05)] transition-all duration-500">
-                      <span className="text-6xl font-headline font-extrabold text-outline-variant/20 block mb-4">
+                    <div className="glass-panel p-6 sm:p-8 md:p-12 rounded-xl border border-outline-variant/10 hover:shadow-[0_0_30px_rgba(148,171,245,0.05)] transition-all duration-500">
+                      <span className="text-4xl sm:text-5xl md:text-6xl font-headline font-extrabold text-outline-variant/20 block mb-4">
                         {s.step}
                       </span>
                       <h3
-                        className={`text-3xl font-headline font-bold mb-4 ${colors[i]}`}
+                        className={`text-2xl sm:text-3xl font-headline font-bold mb-4 ${colors[i]}`}
                       >
                         {s.title}
                       </h3>
@@ -177,11 +177,11 @@ export default function Process() {
       </div>
 
       {/* CTA */}
-      <Reveal className="mt-48 px-8 lg:px-24 max-w-7xl mx-auto">
+      <Reveal className="mt-16 sm:mt-24 md:mt-48 px-4 sm:px-6 md:px-8 lg:px-24 max-w-7xl mx-auto">
         <div className="relative py-24 rounded-3xl overflow-hidden bg-surface-container-high">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
           <div className="relative z-10 text-center max-w-3xl mx-auto px-6">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold mb-8 tracking-tight">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-headline font-bold mb-8 tracking-tight">
               Pronto para iniciar a sua{" "}
               <span className="text-gradient">transformação</span>?
             </h2>

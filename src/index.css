@@ -74,16 +74,18 @@
   .bg-gradient-primary {
     background: linear-gradient(135deg, #94abf5 0%, #00d2fd 100%);
   }
-  /* ─── Kinetic hover effect ─── */
+  /* ─── Kinetic hover (desktop) + active (touch) ─── */
   .kinetic-hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  .kinetic-hover:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 20px rgba(0, 210, 253, 0.2);
+  @media (hover: hover) {
+    .kinetic-hover:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba(0, 210, 253, 0.2);
+    }
   }
   .kinetic-hover:active {
-    transform: scale(0.98);
+    transform: scale(0.97);
   }
   /* ─── Ambient glow ─── */
   .glow-primary {
@@ -127,14 +129,14 @@
     width: 100%;
     opacity: 1;
   }
-  /* ─── Card tilt on hover ─── */
+  /* ─── Card tilt on hover (desktop only) ─── */
   .tilt-card {
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    transform-style: preserve-3d;
-    perspective: 800px;
   }
-  .tilt-card:hover {
-    transform: perspective(800px) rotateX(2deg) rotateY(-3deg) scale(1.02);
+  @media (hover: hover) {
+    .tilt-card:hover {
+      transform: perspective(800px) rotateX(2deg) rotateY(-3deg) scale(1.02);
+    }
   }
   /* ─── Magnetic button ─── */
   .btn-magnetic {
@@ -167,38 +169,45 @@
     outline-offset: 2px;
     border-radius: 4px;
   }
-  /* ─── Smooth image zoom on hover ─── */
+  /* ─── Smooth image zoom (desktop hover + touch active) ─── */
   .img-zoom {
     overflow: hidden;
   }
   .img-zoom img {
     transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s ease;
   }
-  .img-zoom:hover img {
-    transform: scale(1.08);
-    filter: brightness(1.1);
+  @media (hover: hover) {
+    .img-zoom:hover img {
+      transform: scale(1.08);
+      filter: brightness(1.1);
+    }
   }
-  /* ─── Cursor follow glow (applied via JS) ─── */
+  .img-zoom:active img {
+    transform: scale(1.04);
+  }
+  /* ─── Cursor follow glow (desktop only — disabled on touch) ─── */
   .cursor-glow {
     position: relative;
     overflow: hidden;
   }
-  .cursor-glow::before {
-    content: '';
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 210, 253, 0.08) 0%, transparent 70%);
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    left: var(--mouse-x, 50%);
-    top: var(--mouse-y, 50%);
-  }
-  .cursor-glow:hover::before {
-    opacity: 1;
+  @media (hover: hover) and (pointer: fine) {
+    .cursor-glow::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 210, 253, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      left: var(--mouse-x, 50%);
+      top: var(--mouse-y, 50%);
+    }
+    .cursor-glow:hover::before {
+      opacity: 1;
+    }
   }
   /* ─── Counter number animation ─── */
   .counter-value {
