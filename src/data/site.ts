@@ -165,6 +165,10 @@ export const PROCESS_STEPS = [
   },
 ];
 
+/**
+ * ⚠️  PLACEHOLDER — Substituir por depoimentos REAIS de clientes.
+ * Pedir reviews via Google My Business ou WhatsApp e atualizar aqui.
+ */
 export const TESTIMONIALS = [
   {
     name: "Mariana S.",

@@ -4,6 +4,7 @@ import Loader from "./components/Loader";
 
 const Home = lazy(() => import("./pages/Home"));
 const ServicePage = lazy(() => import("./pages/ServicePage"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -31,6 +32,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/:slug" element={<ServicePage />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </div>

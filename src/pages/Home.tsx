@@ -5,10 +5,10 @@ import Marquee from "../components/Marquee";
 import Hero from "../sections/Hero";
 import Footer from "../sections/Footer";
 
-// Code-split below-fold sections
 const Services = lazy(() => import("../sections/Services"));
 const Process = lazy(() => import("../sections/Process"));
 const Portfolio = lazy(() => import("../sections/Portfolio"));
+const BeforeAfter = lazy(() => import("../sections/BeforeAfter"));
 const Contact = lazy(() => import("../sections/Contact"));
 
 function SectionFallback() {
@@ -45,6 +45,9 @@ export default function Home() {
         </Suspense>
         <Suspense fallback={<SectionFallback />}>
           <Portfolio />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <BeforeAfter />
         </Suspense>
         <Suspense fallback={<SectionFallback />}>
           <Contact />
